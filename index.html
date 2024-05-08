@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roku Cafe</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ product }}</h1>
+    <p>{{tasteNotes}}</p>
+  </div>
+  
+  <!-- Import App -->
+  <script src="main.js"></script>
+  <!-- Mount App -->
+  <script>
+    const mountedApp = app.mount('#app')
+  </script>
+</body>
+</html>

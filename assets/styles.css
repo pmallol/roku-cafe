@@ -1,0 +1,53 @@
+/* Body styles */
+body {
+  background-color: #f0f8ff; /* Light blue */
+  color: #333; /* Dark gray */
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #008080; /* Teal */
+  padding: 20px;
+  color: #fff; /* White */
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #006400; /* Dark green */
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff; /* White */
+  text-decoration: none;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #008080; /* Teal */
+  padding: 20px;
+  color: #fff; /* White */
+  text-align: center;
+}
