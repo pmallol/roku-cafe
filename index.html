@@ -7,10 +7,42 @@
 </head>
 <body>
   <div id="app">
-    <h1>{{ product }}</h1>
-    <p>{{tasteNotes}}</p>
-  </div>
-  
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>
+        Roku Cafe
+      </h1>
+      <div class="description">
+        <h2>About Us</h2>
+        <p>Welcome to our indie hip coffee store! We are passionate about providing you with the best coffee experience. Our carefully selected coffee beans are sourced from around the world and roasted to perfection. Whether you're a coffee connoisseur or just starting your coffee journey, we have something for everyone. Explore our wide range of unique and flavorful coffee blends and indulge in the rich aromas and smooth flavors. Join us in celebrating the art of coffee and discover your new favorite brew. Cheers!</p>
+      </div>
+      <div class="product-list">
+        <div class="product">
+          <h2 class="product-title">{{productName}}</h2>
+          <p>In Stock</p>
+          <p>Out of Stock</p>
+          <img class="product-image" v-bind:src="image" alt="Product Image">
+          <p>Taste Notes:</p>
+          <ul>
+            <li v-for="notes in tasteNotes">{{notes}}</li>
+          </ul>
+          <p class="product-price">Price: ${{price}}</p>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+  <footer>
+    <p>&copy; 2022 Roku Cafe. All rights reserved.</p>
+  </footer>
+
   <!-- Import App -->
   <script src="main.js"></script>
   <!-- Mount App -->
