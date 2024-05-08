@@ -1,13 +1,13 @@
 /* Body styles */
 body {
-  background-color: #f0f8ff; /* Light blue */
+  background-color: #daecfb; /* Light blue */
   color: #333; /* Dark gray */
   font-family: Arial, sans-serif;
 }
 
 /* Header styles */
 header {
-  background-color: #008080; /* Teal */
+  background-color: #15c9c9; /* Teal */
   padding: 20px;
   color: #fff; /* White */
 }
@@ -19,7 +19,7 @@ h1 {
 
 /* Navigation styles */
 nav {
-  background-color: #006400; /* Dark green */
+  background-color: #5eb4d3; /* Dark green */
   padding: 10px;
 }
 
@@ -42,6 +42,37 @@ nav ul li a {
 /* Main content styles */
 main {
   padding: 20px;
+}
+
+/* Product display styles */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #888;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555;
 }
 
 /* Footer styles */
