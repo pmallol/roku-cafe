@@ -26,14 +26,21 @@
       <div class="product-list">
         <div class="product">
           <h2 class="product-title">{{productName}}</h2>
-          <p>In Stock</p>
-          <p>Out of Stock</p>
+          <p v-if="inventory > 10">In Stock</p>
+          <p v-else-if="inventory && inventory < 10">Almost Sold Out!</p>
+          <p v-else>Out of Stock</p>
           <img class="product-image" v-bind:src="image" alt="Product Image">
+          <p v-if="variants">Size:</p>
+          <ul>
+            <li v-for="variant in variants" :key="variant.id">
+              {{variant.size}}
+            </li>
+          </ul>
           <p>Taste Notes:</p>
           <ul>
-            <li v-for="notes in tasteNotes">{{notes}}</li>
+            <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
           </ul>
-          <p class="product-price">Price: ${{price}}</p>
+          <p class="product-price">Price: ${{price}} <span v-if="onSale">On Sale!</span></p>
         </div>
       </div>
     </div>
