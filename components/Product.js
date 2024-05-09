@@ -31,6 +31,8 @@ app.component('Product', {
         <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
       </ul>
       <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to Cart</button>
+
+      <product-form @review-submitted="addReview"></product-form>
     </div>`,
     data() {
       return {
@@ -43,6 +45,7 @@ app.component('Product', {
           { id: 2, size:'500gr', price: 25.00,quantity: 9},
         ], 
         selectedVariant: 0,
+        reviews: []
       }
     },
     computed: {
@@ -63,6 +66,9 @@ app.component('Product', {
       },
       updateVariant(index) {
         this.selectedVariant = index
+      },
+      addReview(review) {
+        this.reviews.push(review)
       }
     }
 });
