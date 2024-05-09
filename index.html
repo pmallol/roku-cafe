@@ -14,7 +14,7 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <div class="cart">
-        <p>Cart ({{cart}})</p>
+        <p>Cart ({{cart.length}})</p>
       </div>
     </nav>
     <main>
@@ -26,7 +26,7 @@
         <p>Welcome to our hip coffee store! We are passionate about providing you with the best coffee experience. Our carefully selected coffee beans are sourced from around the world and roasted to perfection. Whether you're a coffee connoisseur or just starting your coffee journey, we have something for everyone. Explore our wide range of unique and flavorful coffee blends and indulge in the rich aromas and smooth flavors. Join us in celebrating the art of coffee and discover your new favorite brew. Cheers!</p>
       </div>
       <div class="product-list">
-        <Product :premium="premiumUser"/>
+        <Product :premium="premiumUser" @add-to-cart="updateCart" />
       </div>
     </div>
     
