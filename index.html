@@ -28,6 +28,8 @@
       <div class="product-list">
         <div class="product">
           <h2 class="product-title">{{productName}}</h2>
+          <div class="product-price">
+            <p>Price: ${{finalPrice}} <span v-if="onSale">On Sale!</span></p></div>
           <p v-if="inStock > 10">In Stock</p>
           <p v-else-if="inStock && inStock < 10">Almost Sold Out!</p>
           <p v-else>Out of Stock</p>
@@ -42,7 +44,6 @@
           <ul>
             <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
           </ul>
-          <p class="product-price">Price: ${{finalPrice}} <span v-if="onSale">On Sale!</span></p>
           <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to Cart</button>
         </div>
       </div>
