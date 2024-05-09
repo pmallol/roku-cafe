@@ -28,7 +28,7 @@ app.component('Product', {
       </div>
       <p>Taste Notes:</p>
       <ul>
-        <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
+        <li v-for="notes in tasteNotes" :key="notes">{{notes.charAt(0).toUpperCase() + notes.slice(1)}}</li>
       </ul>
       <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to Cart</button>
 
@@ -37,7 +37,7 @@ app.component('Product', {
     </div>`,
     data() {
       return {
-        productName: 'Sakura Coffee beans',
+        productName: 'Sakura Coffee Beans',
         tasteNotes: ['cherry', 'almond', 'chocolate'],
         image: './assets/images/De-Mello-coffee-sakura-227g.webp',
         onSale: true,
