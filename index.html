@@ -42,7 +42,7 @@
           <ul>
             <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
           </ul>
-          <p class="product-price">Price: ${{price}} <span v-if="onSale">On Sale!</span></p>
+          <p class="product-price">Price: ${{finalPrice}} <span v-if="onSale">On Sale!</span></p>
           <button v-on:click="addToCart" :disabled="!inventory" :class="{ disabledButton: !inventory }">Add to Cart</button>
         </div>
       </div>
