@@ -32,6 +32,7 @@ app.component('Product', {
       </ul>
       <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to Cart</button>
 
+      <product-review-list v-if="reviews.length" :reviews="reviews"></product-review-list>
       <product-form @review-submitted="addReview"></product-form>
     </div>`,
     data() {
