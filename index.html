@@ -10,10 +10,12 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+      <div class="cart">
+        <p>Cart ({{cart}})</p>
+      </div>
     </nav>
     <main>
       <h1>
@@ -21,7 +23,7 @@
       </h1>
       <div class="description">
         <h2>About Us</h2>
-        <p>Welcome to our indie hip coffee store! We are passionate about providing you with the best coffee experience. Our carefully selected coffee beans are sourced from around the world and roasted to perfection. Whether you're a coffee connoisseur or just starting your coffee journey, we have something for everyone. Explore our wide range of unique and flavorful coffee blends and indulge in the rich aromas and smooth flavors. Join us in celebrating the art of coffee and discover your new favorite brew. Cheers!</p>
+        <p>Welcome to our hip coffee store! We are passionate about providing you with the best coffee experience. Our carefully selected coffee beans are sourced from around the world and roasted to perfection. Whether you're a coffee connoisseur or just starting your coffee journey, we have something for everyone. Explore our wide range of unique and flavorful coffee blends and indulge in the rich aromas and smooth flavors. Join us in celebrating the art of coffee and discover your new favorite brew. Cheers!</p>
       </div>
       <div class="product-list">
         <div class="product">
@@ -41,6 +43,7 @@
             <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
           </ul>
           <p class="product-price">Price: ${{price}} <span v-if="onSale">On Sale!</span></p>
+          <button v-on:click="addToCart" :disabled="!inventory" :class="{ disabledButton: !inventory }">Add to Cart</button>
         </div>
       </div>
     </div>
