@@ -88,9 +88,35 @@ main {
   background-color: #008080; /* Teal */
 }
 
+/* Product form styles */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.product-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.product-form input[type="text"],
+.product-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.product-form input[type="submit"] {
+  background-color: #5eb4d3; /* Dark green */
+  color: #fff; /* White */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.product-form input[type="submit"]:hover {
+  background-color: #008080; /* Teal */
+}
+
 /* Footer styles */
 footer {
-  background-color: #008080; /* Teal */
+  background-color: #313535; /* Teal */
   padding: 20px;
   color: #fff; /* White */
   text-align: center;
