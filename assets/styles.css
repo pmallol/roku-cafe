@@ -6,12 +6,6 @@ body {
 }
 
 /* Header styles */
-header {
-  background-color: #15c9c9; /* Teal */
-  padding: 20px;
-  color: #fff; /* White */
-}
-
 h1 {
   font-size: 32px;
   margin: 0;
@@ -21,6 +15,8 @@ h1 {
 nav {
   background-color: #5eb4d3; /* Dark green */
   padding: 10px;
+  display: flex;
+  place-content: space-between;
 }
 
 nav ul {
@@ -41,9 +37,6 @@ nav ul li a {
 
 nav .cart {
   color: #fff; /* White */
-  font-size: 20px;
-  position: relative;
-  right: 0px;
 }
 
 /* Main content styles */
@@ -80,6 +73,19 @@ main {
 .product-description {
   font-size: 14px;
   color: #555;
+}
+
+.product button {
+  background-color: #5eb4d3; /* Dark green */
+  color: #fff; /* White */
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #008080; /* Teal */
 }
 
 /* Footer styles */
