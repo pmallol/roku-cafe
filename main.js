@@ -10,7 +10,8 @@ const app = Vue.createApp({
       variants: [
         { id: 1, size:'226gr', quantity: 18},
         { id: 2, size:'500gr', quantity: 9},
-      ]
+      ], 
+      selectedVariant: 0,
     }
   },
   computed: {
@@ -20,11 +21,17 @@ const app = Vue.createApp({
         return this.price - discount
       }
       return this.price
+    },
+    inStock() {
+      return this.variants[this.selectedVariant].quantity
     }
   },
   methods: {
     addToCart() {
       this.cart += 1
+    },
+    updateVariant(index) {
+      this.selectedVariant = index
     }
   }
 })
