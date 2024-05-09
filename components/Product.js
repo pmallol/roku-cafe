@@ -1,4 +1,10 @@
 app.component('Product', {
+  props: {
+    premium: {
+      type: Boolean,
+      required: true
+    }
+  },
   template:
     /*html*/
     `<div class="product">
@@ -12,6 +18,7 @@ app.component('Product', {
       <p v-if="inStock > 10">In Stock</p>
       <p v-else-if="inStock && inStock < 10">Almost Sold Out!</p>
       <p v-else>Out of Stock</p>
+      <p>Shipping: {{ premium ? 'Free' : '$2.99' }}</p>
       <img class="product-image" v-bind:src="image" alt="Product Image">
       <div>
         <p v-if="variants">Size:</p>
