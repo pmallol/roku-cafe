@@ -26,36 +26,21 @@
         <p>Welcome to our hip coffee store! We are passionate about providing you with the best coffee experience. Our carefully selected coffee beans are sourced from around the world and roasted to perfection. Whether you're a coffee connoisseur or just starting your coffee journey, we have something for everyone. Explore our wide range of unique and flavorful coffee blends and indulge in the rich aromas and smooth flavors. Join us in celebrating the art of coffee and discover your new favorite brew. Cheers!</p>
       </div>
       <div class="product-list">
-        <div class="product">
-          <h2 class="product-title">{{productName}}</h2>
-          <div class="product-price">
-            <p>Price: ${{finalPrice}} <span v-if="onSale">On Sale!</span></p></div>
-          <p v-if="inStock > 10">In Stock</p>
-          <p v-else-if="inStock && inStock < 10">Almost Sold Out!</p>
-          <p v-else>Out of Stock</p>
-          <img class="product-image" v-bind:src="image" alt="Product Image">
-          <div>
-            <p v-if="variants">Size:</p>
-            <div v-for="(variant, index) in variants" :key="variant.id" @mouseover="updateVariant(index)">
-              <p>{{variant.size}}</p>
-            </div>
-          </div>
-          <p>Taste Notes:</p>
-          <ul>
-            <li v-for="notes in tasteNotes" :key="notes">{{notes}}</li>
-          </ul>
-          <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock }">Add to Cart</button>
-        </div>
+        <Product></Product>
       </div>
     </div>
     
   </main>
   <footer>
-    <p>&copy; 2022 Roku Cafe. All rights reserved.</p>
+    <p>&copy; 2024 Roku Cafe. All rights reserved.</p>
   </footer>
 
   <!-- Import App -->
   <script src="main.js"></script>
+  
+  <!-- Import Components -->
+  <script src="./components/Product.js"></script>
+  
   <!-- Mount App -->
   <script>
     const mountedApp = app.mount('#app')
